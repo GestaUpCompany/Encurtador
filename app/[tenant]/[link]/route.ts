@@ -4,11 +4,18 @@ import { NextResponse, type NextRequest } from 'next/server'
 
 export const dynamic = 'force-dynamic'
 
+const RESERVED_PATHS = ['admin', 'login', 'api', '_next']
+
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ tenant: string; link: string }> }
 ) {
   const { tenant: tenantSlug, link: linkSlug } = await params
+
+  // Let static routes like /admin/* and /login match before this dynamic route.
+  if (RESERVED_PATHS.includes(tenantSlug)) {
+    return NextResponse.next()
+  }
 
   const supabase = createServiceClient()
 
