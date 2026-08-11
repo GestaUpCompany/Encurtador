@@ -56,7 +56,7 @@ export default async function AnalyticsPage() {
                         <td className="px-4 py-3 text-sm text-gray-900">
                           {link.title || link.slug}
                         </td>
-                        <td className="px-4 py-3 text-sm text-indigo-600">
+                        <td className="px-4 py-3 text-sm text-primary">
                           {tenant ? `/go/${tenant.slug}/${link.slug}` : '-'}
                         </td>
                         <td className="px-4 py-3 text-right text-sm font-semibold text-gray-900">

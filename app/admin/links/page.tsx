@@ -55,7 +55,7 @@ export default async function LinksPage() {
                     return (
                       <tr key={link.id}>
                         <td className="px-4 py-3 text-sm text-gray-900">{link.title || link.slug}</td>
-                        <td className="px-4 py-3 text-sm text-indigo-600">
+                        <td className="px-4 py-3 text-sm text-primary">
                           {tenant ? (
                             <Link href={shortUrl} target="_blank">
                               {shortUrl}

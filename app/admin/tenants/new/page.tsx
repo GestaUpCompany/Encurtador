@@ -32,7 +32,7 @@ export default function NewTenantPage() {
                 name="name"
                 type="text"
                 required
-                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-primary focus:outline-none focus:ring-primary"
               />
             </div>
             <div>
@@ -46,7 +46,7 @@ export default function NewTenantPage() {
                 required
                 pattern="[a-z0-9]+(?:-[a-z0-9]+)*"
                 title="Apenas letras minúsculas, números e hífens"
-                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-primary focus:outline-none focus:ring-primary"
               />
               <p className="mt-1 text-xs text-gray-500">Ex.: cliente-financeiro</p>
             </div>
@@ -58,7 +58,7 @@ export default function NewTenantPage() {
                 id="description"
                 name="description"
                 rows={3}
-                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-primary focus:outline-none focus:ring-primary"
               />
             </div>
             <div className="flex items-center gap-2">
@@ -67,7 +67,7 @@ export default function NewTenantPage() {
                 name="active"
                 type="checkbox"
                 defaultChecked
-                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
               />
               <label htmlFor="active" className="text-sm text-gray-700">
                 Ativo

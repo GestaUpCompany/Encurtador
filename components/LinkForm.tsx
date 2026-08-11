@@ -39,7 +39,7 @@ export function LinkForm({
               name="tenant_id"
               defaultValue={link?.tenant_id ?? tenants[0].id}
               required
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-primary focus:outline-none focus:ring-primary"
             >
               {tenants.map((tenant) => (
                 <option key={tenant.id} value={tenant.id}>
@@ -58,7 +58,7 @@ export function LinkForm({
               type="text"
               defaultValue={link?.title ?? ''}
               required
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-primary focus:outline-none focus:ring-primary"
             />
           </div>
           <div>
@@ -73,7 +73,7 @@ export function LinkForm({
               required
               pattern="[a-z0-9]+(?:-[a-z0-9]+)*"
               title="Apenas letras minúsculas, números e hífens"
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-primary focus:outline-none focus:ring-primary"
             />
             <p className="mt-1 text-xs text-gray-500">Ex.: relatorio-mensal</p>
           </div>
@@ -87,7 +87,7 @@ export function LinkForm({
               type="url"
               defaultValue={link?.destination_url ?? ''}
               required
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-primary focus:outline-none focus:ring-primary"
             />
             {link && (
               <p className="mt-1 text-xs text-gray-500">
@@ -101,7 +101,7 @@ export function LinkForm({
               name="active"
               type="checkbox"
               defaultChecked={link?.active ?? true}
-              className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+              className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
             />
             <label htmlFor="active" className="text-sm text-gray-700">
               Ativo
