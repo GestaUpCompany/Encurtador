@@ -51,7 +51,7 @@ export default async function LinksPage() {
                 <tbody className="divide-y divide-gray-200">
                   {links.map((link) => {
                     const tenant = tenantMap.get(link.tenant_id)
-                    const shortUrl = tenant ? `/${tenant.slug}/${link.slug}` : ''
+                    const shortUrl = tenant ? `/go/${tenant.slug}/${link.slug}` : ''
                     return (
                       <tr key={link.id}>
                         <td className="px-4 py-3 text-sm text-gray-900">{link.title || link.slug}</td>

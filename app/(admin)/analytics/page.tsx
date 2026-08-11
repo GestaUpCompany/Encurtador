@@ -57,7 +57,7 @@ export default async function AnalyticsPage() {
                           {link.title || link.slug}
                         </td>
                         <td className="px-4 py-3 text-sm text-indigo-600">
-                          {tenant ? `/${tenant.slug}/${link.slug}` : '-'}
+                          {tenant ? `/go/${tenant.slug}/${link.slug}` : '-'}
                         </td>
                         <td className="px-4 py-3 text-right text-sm font-semibold text-gray-900">
                           {totals.get(link.id) ?? 0}
