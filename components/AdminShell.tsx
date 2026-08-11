@@ -7,7 +7,7 @@ import { LayoutDashboard, Building2, Link2, BarChart3, LogOut } from 'lucide-rea
 import Image from 'next/image'
 
 const navigation = [
-  { name: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
+  { name: 'Menu', href: '/admin/dashboard', icon: LayoutDashboard },
   { name: 'Clientes', href: '/admin/tenants', icon: Building2 },
   { name: 'Links', href: '/admin/links', icon: Link2 },
   { name: 'Analytics', href: '/admin/analytics', icon: BarChart3 },
@@ -26,13 +26,13 @@ export function AdminShell({
     <div className="min-h-full bg-gray-50">
       <div className="flex min-h-full">
         <aside className="w-64 shrink-0 border-r border-gray-200 bg-white">
-          <div className="flex h-16 items-center border-b border-gray-200 px-6">
+          <div className="flex h-24 items-center border-b border-gray-200 px-6">
             <Image
               src="/logo-gestaup.jpeg"
               alt="GestaUp"
-              width={120}
-              height={32}
-              className="h-8 w-auto"
+              width={300}
+              height={80}
+              className="h-20 w-auto"
               priority
             />
           </div>

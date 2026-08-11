@@ -15,9 +15,9 @@ export default function LoginPage() {
           <Image
             src="/logo-gestaup.jpeg"
             alt="GestaUp"
-            width={180}
-            height={48}
-            className="mx-auto h-12 w-auto"
+            width={450}
+            height={120}
+            className="mx-auto h-30 w-auto"
             priority
           />
           <p className="mt-2 text-sm text-gray-600">Painel administrativo do encurtador</p>

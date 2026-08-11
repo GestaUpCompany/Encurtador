@@ -8,9 +8,9 @@ export default function HomePage() {
         <Image
           src="/logo-gestaup.jpeg"
           alt="GestaUp"
-          width={240}
-          height={64}
-          className="mx-auto h-16 w-auto"
+          width={600}
+          height={160}
+          className="mx-auto h-40 w-auto"
           priority
         />
         <p className="mt-4 text-lg text-gray-600">Encurtador de links para relatórios do Power BI</p>
