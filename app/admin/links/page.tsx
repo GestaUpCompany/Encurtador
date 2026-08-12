@@ -1,11 +1,18 @@
 import Link from 'next/link'
+import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { deleteLink } from '@/app/actions/links'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
+import { CopyButton } from '@/components/CopyButton'
 
 export default async function LinksPage() {
   const supabase = await createClient()
+
+  const headerList = await headers()
+  const host = headerList.get('host') ?? 'localhost:3000'
+  const protocol = headerList.get('x-forwarded-proto') ?? 'http'
+  const origin = `${protocol}://${host}`
 
   const { data: links, error: linksError } = await supabase
     .from('links')
@@ -51,15 +58,19 @@ export default async function LinksPage() {
                 <tbody className="divide-y divide-gray-200">
                   {links.map((link) => {
                     const tenant = tenantMap.get(link.tenant_id)
-                    const shortUrl = tenant ? `/go/${tenant.slug}/${link.slug}` : ''
+                    const shortPath = tenant ? `/go/${tenant.slug}/${link.slug}` : ''
+                    const fullUrl = shortPath ? `${origin}${shortPath}` : ''
                     return (
                       <tr key={link.id}>
                         <td className="px-4 py-3 text-sm text-gray-900">{link.title || link.slug}</td>
                         <td className="px-4 py-3 text-sm text-primary">
                           {tenant ? (
-                            <Link href={shortUrl} target="_blank">
-                              {shortUrl}
-                            </Link>
+                            <div className="flex items-center gap-1">
+                              <Link href={shortPath} target="_blank">
+                                {shortPath}
+                              </Link>
+                              <CopyButton url={fullUrl} />
+                            </div>
                           ) : (
                             <span className="text-gray-400">-</span>
                           )}
